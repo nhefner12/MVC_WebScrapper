@@ -16,6 +16,7 @@ namespace MVC_WebScrapper.Models
 
     public class CNBCStories
     {
+        public int ID { get; set; }
         public string Type { get; set; }
         public List<CNBCModel> stories { get; set; }
     }
