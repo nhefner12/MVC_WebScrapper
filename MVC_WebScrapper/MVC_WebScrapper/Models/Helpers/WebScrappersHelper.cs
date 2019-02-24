@@ -21,8 +21,10 @@ namespace MVC_WebScrapper.Models.Helpers
 
             //Fill Web Scrapper information
             WebScrapperModel ws1 = new WebScrapperModel(1, "CNBC", "Data and stories coming from CNBC", "/Content/Images/CNBC_logo.svg");
+            WebScrapperModel ws2 = new WebScrapperModel(2, "Fox News", "Data and stories coming from Fox News", "/Content/Images/New_Fox_News_Channel_logo.svg");
 
             result.Add(ws1);
+            result.Add(ws2);
 
             return result;
         }

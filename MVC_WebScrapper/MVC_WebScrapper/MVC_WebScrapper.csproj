@@ -152,6 +152,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\CNBC_logo.svg" />
+    <Content Include="Content\Images\New_Fox_News_Channel_logo.svg" />
+    <Content Include="Content\Images\No_Content.svg" />
     <Content Include="Content\WebScrappers.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -185,6 +187,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\WebScrappers.cshtml" />
+    <Content Include="Views\Shared\Partials\EmptyModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
