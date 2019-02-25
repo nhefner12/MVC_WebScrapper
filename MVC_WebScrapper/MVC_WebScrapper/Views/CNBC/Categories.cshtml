@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MVC_WebScrapper.Models.CNBCCategories>
+
+@section AddToHead{
+    <link href="@Url.Content("~/Content/WebScrappers.css")" rel="stylesheet" type="text/css" />
+}
+
+@{
+    if (Model == null)
+    {
+        @Html.Partial("~/Views/Shared/Partials/EmptyModel.cshtml")
+    }
+    else
+    {
+        <h2>CNBC Categories</h2>
+        <hr />
+
+        <div class="section group">
+            @foreach (var item in Model)
+            {
+
+                <div class="col span_1_of_5">
+                        <div>
+                            <h1>
+                                <a href=@Html.DisplayFor(modelItem => item.CategoryLink)>@Html.DisplayFor(modelItem => item.CategoryType)</a>
+                            </h1>
+                        </div>
+                        <div class="container card_desc">
+                            <h4><b>@Html.DisplayFor(modelItem => item.CategoryHeadLineTitle)</b></h4>
+                            <a href=@Html.DisplayFor(modelItem => item.CategoryHeadLineLink)>Read More...</a>
+                        </div>
+
+                </div>
+            }
+        </div>
+
+    }
+}

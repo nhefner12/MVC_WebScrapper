@@ -10,10 +10,16 @@ namespace MVC_WebScrapper.Controllers
 {
     public class HomeController : Controller
     {
-       /// <summary>
-       /// returns view of home page
-       /// </summary>
-       /// <returns></returns>
+        #region Globals
+
+        WebScrappersHelper helper = new WebScrappersHelper();
+
+        #endregion
+
+        /// <summary>
+        /// returns view of home page
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             return View();
@@ -34,8 +40,6 @@ namespace MVC_WebScrapper.Controllers
         /// <returns></returns>
         public ActionResult WebScrappers()
         {
-            WebScrappersHelper helper = new WebScrappersHelper();
-
             List<WebScrapperModel> listModel = helper.populateWebScrappers();
 
             return View(listModel);

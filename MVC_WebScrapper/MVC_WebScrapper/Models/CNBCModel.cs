@@ -5,19 +5,31 @@ using System.Web;
 
 namespace MVC_WebScrapper.Models
 {
-    public class CNBCModel
-    {
-        
-        public string Headline { get; set; }
-        public string Img { get; set; }
-        public string Detail { get; set; }
 
-    }
-
-    public class CNBCStories
+    public class CNBCCategories
     {
-        public int ID { get; set; }
-        public string Type { get; set; }
-        public List<CNBCModel> stories { get; set; }
+        public int CategoryID { get; set; }
+        public string CategoryType { get; set; }
+        public string CategoryLink { get; set; }
+        public string CategoryHeadLineTitle { get; set; }
+        public string CategoryHeadLineLink { get; set; }
+
+        public CNBCCategories()
+        {
+            CategoryID = 1;
+            CategoryType = "Default";
+            CategoryLink = "";
+            CategoryHeadLineTitle = "Default";
+            CategoryHeadLineLink = "";
+        }
+
+        public CNBCCategories(int ID, string Type, string Link, string HeadLineTitle, string HeadLineLink)
+        {
+            this.CategoryID = ID;
+            this.CategoryType = Type;
+            this.CategoryLink = Link;
+            this.CategoryHeadLineTitle = HeadLineTitle;
+            this.CategoryHeadLineLink = HeadLineLink;
+        }
     }
 }

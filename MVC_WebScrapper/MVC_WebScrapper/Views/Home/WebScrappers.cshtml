@@ -24,13 +24,15 @@
             {
 
                 <div class="col span_1_of_5">
-                    <img src="@Html.DisplayFor(modelItem => item.Img)" style="width:100%">
-                    <div class="container card_desc">
-                        <h4><b>@Html.DisplayFor(modelItem => item.Name)</b></h4>
-                        <p>@Html.DisplayFor(modelItem => item.Description)</p>
-                    </div>
+                    <a href='@Url.Action("Categories", "CNBC")'>
+                        <img src="@Html.DisplayFor(modelItem => item.Img)" style="width:100%">
+                        <div class="container card_desc">
+                            <h4><b>@Html.DisplayFor(modelItem => item.Name)</b></h4>
+                            <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                        </div>
+                    </a>
+                    
                 </div>
-
             }
         </div>
 

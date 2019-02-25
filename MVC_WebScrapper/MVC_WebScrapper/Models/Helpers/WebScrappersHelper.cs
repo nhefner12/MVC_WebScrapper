@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Net;
 
 namespace MVC_WebScrapper.Models.Helpers
 {
@@ -27,6 +28,23 @@ namespace MVC_WebScrapper.Models.Helpers
             result.Add(ws2);
 
             return result;
+        }
+        public string GetUrlSource(string url)
+        {
+            url = url.Substring(0, 4) != "http" ? "http://" + url : url;
+            string htmlCode = "";
+            using (WebClient client = new WebClient())
+            {
+                try
+                {
+                    htmlCode = client.DownloadString(url);
+                }
+                catch (Exception ex)
+                {
+                    //TODO: Implement Custom Error
+                }
+            }
+            return htmlCode;
         }
     }
 }

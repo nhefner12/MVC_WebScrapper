@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.9.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.9.0\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -142,6 +145,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CNBCModel.cs" />
+    <Compile Include="Models\Helpers\CNBCHelper.cs" />
     <Compile Include="Models\Helpers\WebScrappersHelper.cs" />
     <Compile Include="Models\WebScrapperModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -188,6 +192,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\WebScrappers.cshtml" />
     <Content Include="Views\Shared\Partials\EmptyModel.cshtml" />
+    <Content Include="Views\CNBC\Categories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
